@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeroComponent } from './components/hero/hero.component';
+import { BodyComponent } from './components/body/body.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ BodyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'vic-fall_frontend';
+    selectedSection: string = 'home';
+  changeSection(section: string) {
+    this.selectedSection = section;
+  }
 }
