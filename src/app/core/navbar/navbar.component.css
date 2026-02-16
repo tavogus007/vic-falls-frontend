@@ -1,28 +1,81 @@
 .custom-navbar {
-  background: rgba(20, 25, 60, 0.8);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  padding: 1rem 0;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  transition: 
+  background 0.4s ease,
+  backdrop-filter 0.4s ease,
+  padding 0.3s ease;
 }
 
 .navbar-brand {
+  display: flex;     
+  align-items: center; 
+  gap: 10px;   
+  text-decoration: none;
   font-size: 1.5rem;
-  color: #fff;
+  color: #d41818;
 
   .dot {
-    color: #ff4d6d;
+    color: #0bdd62;
   }
 }
 
-.btn-download {
-  background: linear-gradient(45deg, #ff4d6d, #ff758f);
-  color: white;
-  border-radius: 8px;
-  padding: 6px 18px;
-  border: none;
-}
+
 
 .scrolled-navbar {
-  background: #0f1535 !important;
+  background: #1933c9 !important;
 }
 
+.scrolled {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.logo-img {
+  height: 90px; /* ajusta según necesites */
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column; /* 👈 esto hace que el texto se apile */
+  line-height: 1.1;
+}
+
+.text1 {
+  display: flex;
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-left: 10px;
+} 
+
+
+.text2 {
+  display: flex;
+  font-size: 1rem;
+  color: #FFD700;
+  margin-left: 10px;
+  font-weight: lighter;
+} 
+
+.text-options {
+  display: flex;
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-left: 10px;
+  font-weight:lighter;
+} 
+
+@font-face {
+  font-family: 'font1-logo';
+  src: url('/assets/fonts/font2.ttf') format('truetype');
+}
+
+.pesonalized-text {
+  font-family: 'font1-logo', sans-serif;
+}
+
+
+.nav-item{
+  display: flex;
+}
