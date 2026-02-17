@@ -66,11 +66,12 @@
 
 @font-face {
   font-family: 'font1-logo';
-  src: url('/assets/fonts/font2.ttf') format('truetype');
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
 }
 
 .pesonalized-text {
   font-family: 'font1-logo', sans-serif;
+  font-weight: bold;
 }
 
 .nav-item{
