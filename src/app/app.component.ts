@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavbarComponent }  from './core/navbar/navbar.component';
+import { HomeComponent }  from './features/home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ NavbarComponent, HomeComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'vic-fall_frontend';
+    selectedSection: string = 'home';
+  changeSection(section: string) {
+    this.selectedSection = section;
+  }
 }

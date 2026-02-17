@@ -1,0 +1,79 @@
+.custom-navbar {
+  background: transparent;
+  backdrop-filter: blur(0px);
+  transition: 
+  background 0.4s ease,
+  backdrop-filter 0.4s ease,
+  padding 0.3s ease;
+}
+
+.navbar-brand {
+  display: flex;     
+  align-items: center; 
+  gap: 10px;   
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #d41818;
+
+  .dot {
+    color: #0bdd62;
+  }
+}
+
+.scrolled-navbar {
+  background: #1933c9 !important;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.logo-img {
+  height: 90px;
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.text1 {
+  display: flex;
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-left: 10px;
+} 
+
+
+.text2 {
+  display: flex;
+  font-size: 1rem;
+  color: #FFD700;
+  margin-left: 10px;
+  font-weight: lighter;
+} 
+
+.text-options {
+  display: flex;
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-left: 10px;
+  font-weight:lighter;
+} 
+
+@font-face {
+  font-family: 'font1-logo';
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+}
+
+.pesonalized-text {
+  font-family: 'font1-logo', sans-serif;
+  font-weight: bold;
+}
+
+.nav-item{
+  display: flex;
+}

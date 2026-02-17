@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar " [ngClass]="{'scrolled': scrolled}">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="logov4.png" alt="Logo" class="logo-img">
+       <div class="brand-text">
+        <span class="text1 pesonalized-text">VICTORIA FALLS REGIONAL INSTITUTE</span>
+        <span class="text2 pesonalized-text">Remaining Africa through Dialogue</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="navbar-brand nav-link text-options pesonalized-text" href="#" (click)="selectSection('home')">HOME</a>
+          <a class="navbar-brand nav-link text-options pesonalized-text" href="#" (click)="selectSection('about')">ABOUT US</a>
+          <a class="navbar-brand nav-link text-options pesonalized-text" href="#" (click)="selectSection('leadership')">LEADERSHIP</a>
+          <a class="navbar-brand nav-link text-options pesonalized-text" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
