@@ -8,6 +8,13 @@
   border-radius: 50px;
 }
 
+.img-leadership{
+
+  width: 400px;
+  height: auto;
+  border-radius: 50px;
+}
+
 .about-header {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
@@ -64,3 +71,10 @@
 .text-hero{
   font-family: 'font1-logo', sans-serif;
 }
+
+.text-founder{
+    width: 1000px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
