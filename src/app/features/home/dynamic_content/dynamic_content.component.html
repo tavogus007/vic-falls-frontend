@@ -1,0 +1,80 @@
+<div class="dynamic-content" [@fadeAnimation]="section">
+  <div [ngSwitch]="section">
+
+    <div *ngSwitchCase="'home'">
+      <h1 class="display-2 fw-bold">Primary products and services<span class="dot">.</span></h1>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <button class="btn rounded-pill fw-bold">Focus Areas</button>
+        <button class="btn rounded-pill fw-bold">Research & Dialogue</button>
+        <button class="btn rounded-pill fw-bold">Programs</button>
+        <button class="btn rounded-pill fw-bold">News</button>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'about'">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="about_us_3.jpg" alt="About Us" class="shadow img-about-us">
+        </div>
+        <div class="col-md-6 text-start">
+           <div class="about-header" [class.shifted-up]="activeSection !== null">
+              <h2 class="fw-bold">About Victoria Falls Regional Institute</h2>
+              <p class="lead">Victoria Falls Research Institute is a pan African independent academic and research institute with operational bases in Zimbabwe and Kenya.</p>
+              <p class="lead">We seek to localize the power of knowledge in the fields of, International Law, International Relations, Peace & Security, Governance, Development and Humanitarian Affairs</p>
+           </div>
+            <div class="justify-content-center d-flex gap-2">
+              <button 
+                class="btn rounded-pill fw-bold" 
+                [class.btn-active]="activeSection === 'why'"
+                (click)="toggleSection('why')">
+                Why we exist?
+              </button>
+              <button 
+                class="btn rounded-pill fw-bold"
+                [class.btn-active]="activeSection === 'vision'"
+                (click)="toggleSection('vision')">
+                Vision and Mission
+              </button>
+            </div>
+
+
+            <div class="section-content" [class.visible]="activeSection !== null">
+        
+            <div *ngIf="activeSection === 'why'" class="section-text">
+              <h5 class="fw-bold mb-2">Why We Exist?</h5>
+              <p class="lead">
+                Africa is not only rich in human and natural resources. It possesses wealth, wisdom and knowledge. However, its
+                wisdom and knowledge are often demeaned, unrecognised and marginalised; including by some Africans, but more
+                importantly within the global knowledge systems.
+              </p>
+              <p class="lead">A common trend that limits African knowledge and wisdom's role in shaping global research agendas and
+                policies is distance. Discussions, Policy Formulations and Conferences about Africa tend to be held without Africa.
+                They are held outside Africa. Those who possess African wisdom, knowledge and experiences are often denied or
+                have limited access to such platforms, due to many factors including visa and financial limitations.
+              </p>
+            </div>
+
+            <div *ngIf="activeSection === 'vision'" class="section-text">
+              <h5 class="fw-bold mb-2">Vision</h5>
+              <p class="lead">
+                To inspire African Rennaissance.
+              </p>
+              <h5 class="fw-bold mb-2 mt-3">Mission</h5>
+              <p class="lead">
+                To bridge the gap between local knowledge and global research and policy- making; facilitate
+                dialogue towards the creation of African narratives through extensive knowledge production and dissemination.
+              </p>
+            </div>
+
+          </div>
+
+        </div>  
+      </div>
+    </div>
+
+    <div *ngSwitchDefault>
+      <h1 class="display-2 fw-bold">Primary products and services<span class="dot">.</span></h1>
+    </div>
+
+  </div>
+</div>

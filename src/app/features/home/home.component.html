@@ -1,22 +1,11 @@
 <section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
 
-  <!-- VIDEO BACKGROUND -->
   <video #bgVideo autoplay muted loop playsinline class="bg-video">
     <source src="vidbg3.mp4" type="video/mp4">
   </video>
 
-  <!-- OVERLAY OSCURO -->
-  <!-- <div class="overlay"></div> -->
-
-  <!-- CONTENIDO -->
   <div class="content container">
-    <h1 class="display-2 fw-bold ">Primary products and services<span class="dot">.</span></h1>
-    <button class="btn fw-bold rounded-pill">Policy and ResearchDialogues</button>
-    <button class="btn fw-bold rounded-pill">Training Workshops and Short Courses</button>
-    <button class="btn fw-bold rounded-pill">Research Programs</button>
-    <button class="btn fw-bold rounded-pill">Systems Strengthening Courses</button>
-    <button class="btn fw-bold rounded-pill">Consultancy Services</button>
-    
+    <app-dynamic-content [section]="currentSection"></app-dynamic-content>
   </div>
 
 </section>

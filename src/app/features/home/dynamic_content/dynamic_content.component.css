@@ -1,0 +1,56 @@
+.dynamic-content {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-about-us{
+  width: 500px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.about-header {
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+
+  &.shifted-up {
+    transform: translateY(-30px);
+  }
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease;
+
+  &.visible {
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+
+.section-text {
+  padding-top: 12px;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 8px;
+}
+
+
+.btn {
+  border: 2px solid #fcfcfc;
+  color: white;
+  padding: 6px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.btn-active {
+    background-color: #ffffff;
+    color: #145d37;
+  }
+
+  &:hover {
+    background-color: #FFD700;
+    color: #145d37;
+  }
+}

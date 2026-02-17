@@ -20,8 +20,6 @@
   }
 }
 
-
-
 .scrolled-navbar {
   background: #1933c9 !important;
 }
@@ -32,13 +30,13 @@
 }
 
 .logo-img {
-  height: 90px; /* ajusta según necesites */
+  height: 90px;
   width: auto;
 }
 
 .brand-text {
   display: flex;
-  flex-direction: column; /* 👈 esto hace que el texto se apile */
+  flex-direction: column;
   line-height: 1.1;
 }
 
@@ -74,7 +72,6 @@
 .pesonalized-text {
   font-family: 'font1-logo', sans-serif;
 }
-
 
 .nav-item{
   display: flex;
