@@ -36,3 +36,15 @@
 .dot {
   color: #ff4d6d;
 }
+
+.btn{
+  margin: 10px 20px;
+  border: 2px solid #fcfcfc;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover{
+  background: #FFD700;
+  color: #145d37;
+}
