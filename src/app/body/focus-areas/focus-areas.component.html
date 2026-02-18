@@ -1,0 +1,33 @@
+<section class="focus-section py-5">
+  <div class="container">
+
+    <!-- Title -->
+    <div class="text-center mb-3">
+      <h2 class="section-title text-focus">Focus Areas</h2>
+      <p class="section-subtitle text-focus">
+        Our strategic pillars shaping regional transformation and sustainable development.
+      </p>
+    </div>
+
+    <!-- Areas -->
+    <div class="row align-items-center mb-1 text-focus" *ngFor="let area of areas; let i = index">
+      
+      <!-- Image -->
+      <div class="col-md-6 mb-4 mb-md-0"
+           [ngClass]="{'order-md-2': i % 2 !== 0}">
+        <img [src]="area.image" class="img-fluid rounded shadow-sm" alt="{{area.title}}">
+      </div>
+
+      <!-- Text -->
+      <div class="col-md-6"
+           [ngClass]="{'order-md-1': i % 2 !== 0}">
+        <h4 class="area-title">{{ area.title }}</h4>
+        <p class="area-description">
+          {{ area.description }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>

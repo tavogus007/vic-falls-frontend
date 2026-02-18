@@ -1,0 +1,54 @@
+.focus-section {
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.area-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.area-title::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #FFD700; /* dorado institucional */
+  display: block;
+  margin-top: 8px;
+}
+
+.area-description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img {
+  transition: transform 0.4s ease;
+  width: 200px;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+@font-face {
+  font-family: 'base_font';
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+}
+
+.text-focus{
+  font-family: 'base_font', sans-serif;
+}
+

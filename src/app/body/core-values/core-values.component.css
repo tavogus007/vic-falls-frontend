@@ -1,0 +1,46 @@
+.core-values-section {
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: white;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.icon-wrapper i {
+  font-size: 2rem;
+  color: #FF5A3C; /* similar accent to template */
+}
+
+.value-title {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+@font-face {
+  font-family: 'base_font';
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+}
+
+.text-values{
+  font-family: 'base_font', sans-serif;
+}
+
