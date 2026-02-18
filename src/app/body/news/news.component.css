@@ -1,0 +1,36 @@
+.news-section {
+  background: #ffffff;
+}
+
+.news-image {
+  height: 400px;
+  object-fit: contain;
+  background-color: #6e6e6e;
+}
+
+.news-content {
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.news-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.news-description {
+  color: #555;
+  line-height: 1.6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
