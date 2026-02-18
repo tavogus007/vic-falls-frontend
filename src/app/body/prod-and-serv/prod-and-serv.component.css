@@ -1,3 +1,49 @@
 section{
-    background-color: rgb(213, 155, 231);
+    background: linear-gradient(180deg, #f6ecfa, #ffffff);    
+}
+
+.products-section {
+  background: linear-gradient(180deg, #f6ecfa, #ffffff);
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 5px solid #c084d4;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #8e44ad;
+}
+
+.product-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d5a3e6;
+  min-width: 50px;
+}
+
+.product-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.product-description {
+  color: #555;
+  margin: 0;
 }
