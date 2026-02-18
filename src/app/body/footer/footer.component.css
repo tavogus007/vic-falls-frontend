@@ -20,3 +20,12 @@
 .text-gold {
   color: #FFD700;
 }
+
+@font-face {
+  font-family: 'base_font';
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+}
+
+.text-footer{
+  font-family: 'base_font', sans-serif;
+}
