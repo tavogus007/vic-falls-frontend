@@ -1,7 +1,25 @@
 <section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
 
-  <video #bgVideo autoplay muted loop playsinline class="bg-video">
-    <source src="vidbg3.mp4" type="video/mp4">
+  <video #videoA
+        preload="auto"
+         class="bg-video"
+         [class.active]="activeVideo === 'A'"
+         [src]="videoSrcA"
+         autoplay
+         muted
+         playsinline
+         (ended)="switchVideo()">
+  </video>
+
+  <video #videoB
+        preload="auto"
+         class="bg-video"
+         [class.active]="activeVideo === 'B'"
+         [src]="videoSrcB"
+         autoplay
+         muted
+         playsinline
+          (ended)="switchVideo()">
   </video>
 
   <div class="content container">
