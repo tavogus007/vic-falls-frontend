@@ -47,3 +47,7 @@ section{
   color: #555;
   margin: 0;
 }
+
+.text-values{
+  font-family: 'base_font', sans-serif;
+}

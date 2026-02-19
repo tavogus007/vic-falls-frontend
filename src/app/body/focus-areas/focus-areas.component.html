@@ -2,29 +2,30 @@
   <div class="container">
 
     <!-- Title -->
-    <div class="text-center mb-3">
+    <div class="text-center mb-5 text-values">
       <h2 class="section-title text-focus">Focus Areas</h2>
       <p class="section-subtitle text-focus">
         Our strategic pillars shaping regional transformation and sustainable development.
       </p>
     </div>
 
-    <!-- Areas -->
-    <div class="row align-items-center mb-1 text-focus" *ngFor="let area of areas; let i = index">
-      
-      <!-- Image -->
-      <div class="col-md-6 mb-4 mb-md-0"
-           [ngClass]="{'order-md-2': i % 2 !== 0}">
-        <img [src]="area.image" class="img-fluid rounded shadow-sm" alt="{{area.title}}">
-      </div>
+    <!-- Cards Grid -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-values">
 
-      <!-- Text -->
-      <div class="col-md-6"
-           [ngClass]="{'order-md-1': i % 2 !== 0}">
-        <h4 class="area-title">{{ area.title }}</h4>
-        <p class="area-description">
-          {{ area.description }}
-        </p>
+      <div class="col" *ngFor="let area of areas">
+        <div class="focus-card h-100 text-center p-4">
+
+          <img [src]="area.image" 
+               class="focus-img mb-3" 
+               alt="{{area.title}}">
+
+          <h5 class="area-title">{{ area.title }}</h5>
+
+          <p class="area-description">
+            {{ area.description }}
+          </p>
+
+        </div>
       </div>
 
     </div>
