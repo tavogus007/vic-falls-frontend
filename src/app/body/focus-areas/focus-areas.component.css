@@ -1,54 +1,26 @@
-.focus-section {
-  background-color: #ffffff;
+.focus-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.section-title {
-  font-weight: 600;
-  font-size: 2rem;
+.focus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.section-subtitle {
-  color: #6c757d;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.area-title {
-  font-weight: 600;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.area-title::after {
-  content: '';
-  width: 50px;
-  height: 3px;
-  background-color: #FFD700; /* dorado institucional */
-  display: block;
-  margin-top: 8px;
-}
-
-.area-description {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-img {
+.focus-img {
+  width: 80px;
+  height: auto;
   transition: transform 0.4s ease;
-  width: 200px;
 }
 
-img:hover {
-  transform: scale(1.03);
+.focus-card:hover .focus-img {
+  transform: scale(1.1);
 }
 
-@font-face {
-  font-family: 'base_font';
-  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
-}
-
-.text-focus{
+.text-values{
   font-family: 'base_font', sans-serif;
 }
-

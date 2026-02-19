@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NgClass, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-focus-areas',
-  imports: [NgClass, NgFor],
+  imports: [ NgFor],
   templateUrl: './focus-areas.component.html',
   styleUrl: './focus-areas.component.css'
 })

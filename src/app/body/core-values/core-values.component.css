@@ -35,11 +35,6 @@
   margin-top: 10px;
 }
 
-@font-face {
-  font-family: 'base_font';
-  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
-}
-
 .text-values{
   font-family: 'base_font', sans-serif;
 }
