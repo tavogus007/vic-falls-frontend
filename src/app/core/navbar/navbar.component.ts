@@ -9,7 +9,8 @@ import { ContentService } from '../../services/content.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  logoNormal = 'logov4.png';       
+  logoScroll = 'logov2.png';
   scrolled = false;
 
   constructor(private contentService: ContentService) {}

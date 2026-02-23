@@ -24,15 +24,20 @@
 }
 
 .scrolled {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(245, 239, 127, 0.40);
   backdrop-filter: blur(6px);
-  .text-options{
-    color: #225329;
+  .text-options,.text1,.text2 {
+    color: #800000;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  }
+  .logo-img {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
   }
 }
 
 .logo-img {
-  height: 90px;
+  height: 60px;
   width: auto;
 }
 
@@ -62,6 +67,8 @@
   color: #FFD700;
   margin-left: 10px;
   font-weight:lighter;
+  text-shadow: 1px 1px 2px black;
+  transition: color 0.3s ease;
 } 
 
 @font-face {
@@ -73,6 +80,8 @@
   font-family: 'font1-logo', sans-serif;
   font-weight: bold;
   color: #FFD700;
+  text-shadow: 1px 1px 2px black;
+  transition: color 0.3s ease;
 }
 
 .nav-item{
