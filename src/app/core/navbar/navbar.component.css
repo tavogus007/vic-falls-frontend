@@ -24,15 +24,15 @@
 }
 
 .scrolled {
-  background: rgba(245, 239, 127, 0.40);
+  background: rgba(128, 0, 0, 0.40);
   backdrop-filter: blur(6px);
   .text-options,.text1,.text2 {
-    color: #800000;
+    color: #FFD700;
     transition: color 0.3s ease;
-    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
   }
   .logo-img {
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
   }
   .navbar-collapse.show{
     background: none;
@@ -42,6 +42,7 @@
 .logo-img {
   height: 60px;
   width: auto;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
 }
 
 .brand-text {
@@ -67,7 +68,7 @@
 .text-options {
   display: flex;
   font-size: 1.2rem;
-  color: #FFD700;
+  color: #852b2b;
   margin-left: 10px;
   font-weight:lighter;
   text-shadow: 1px 1px 2px black;
@@ -77,9 +78,10 @@
 .pesonalized-text {
   font-family: 'base_font', sans-serif;
   font-weight: bold;
-  color: #FFD700;
+  color: #800000;
   text-shadow: 1px 1px 2px black;
   transition: color 0.3s ease;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
 }
 
 .nav-item{
