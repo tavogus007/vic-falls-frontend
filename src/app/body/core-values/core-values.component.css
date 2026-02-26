@@ -5,12 +5,7 @@
 .section-title {
   font-weight: 600;
   font-size: 2rem;
-}
-
-.section-subtitle {
-  color: #777;
-  max-width: 600px;
-  margin: 0 auto;
+  color: #800000;
 }
 
 .value-card {
@@ -27,18 +22,14 @@
 }
 
 .icon-wrapper i {
-  font-size: 2rem;
-  color: #FF5A3C; /* similar accent to template */
-}
-
-.value-title {
-  font-weight: 500;
-  margin-top: 10px;
-  white-space: nowrap;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: 3rem;
+  color: #800000; /* similar accent to template */
 }
 
 .text-values{
   font-family: 'base_font', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: rgb(14, 13, 13);
 }
 
