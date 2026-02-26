@@ -3,36 +3,66 @@ import { ContentService } from '../../services/content.service';
 import { Subscription } from 'rxjs';
 import { DynamicContentComponent } from './dynamic_content/dynamic_content.component';
 
+
 @Component({
   selector: 'app-home',
   imports: [ DynamicContentComponent ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit, OnInit, OnDestroy{
-  @ViewChild('bgVideo') videoRef!: ElementRef<HTMLVideoElement>;
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy{
 
-  currentSection: string = 'home';
-  private subscription: Subscription;
-
-  constructor(private contentService: ContentService) {
+    constructor(private contentService: ContentService) {
     this.subscription = this.contentService.currentSection$.subscribe(section => {
       this.currentSection = section;
     });
   }
 
-  ngOnInit() {}
+  private subscription: Subscription;
 
-  ngAfterViewInit() {
-    const video = this.videoRef.nativeElement;
-    video.muted = true;
-    video.play().catch(err => {
-      console.log('Autoplay bloqueado:', err);
-    });
+  currentSection: string = 'home';
+  currentIndex = 0;
+  activeVideo: 'A' | 'B' = 'A';
+
+  @ViewChild('videoA') videoARef!: ElementRef<HTMLVideoElement>;
+  @ViewChild('videoB') videoBRef!: ElementRef<HTMLVideoElement>;
+  
+
+  isFading: boolean = false;
+  
+  
+videos: string[] = [
+  'assets/videos/vidbg1.mp4',
+  'assets/videos/vidbg2.mp4',
+  'assets/videos/vidbg3.mp4'
+];
+
+videoSrcA = this.videos[0];
+videoSrcB = this.videos[1];
+currentVideo = this.videos[0];
+
+switchVideo() {
+
+  this.currentIndex = (this.currentIndex + 1) % this.videos.length;
+
+  if (this.activeVideo === 'A') {
+    this.videoSrcB = this.videos[this.currentIndex];
+    this.activeVideo = 'B';
+  } else {
+    this.videoSrcA = this.videos[this.currentIndex];
+    this.activeVideo = 'A';
   }
+}
+
+  ngOnInit() {}
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
+
+  ngAfterViewInit() {
+  this.videoARef.nativeElement.load();
+  this.videoBRef.nativeElement.load();
+}
 
 }

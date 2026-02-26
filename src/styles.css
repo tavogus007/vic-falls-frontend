@@ -1,3 +1,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: 'base_font';
+  src: url('/assets/fonts/JosefinSans.ttf') format('truetype');
+}

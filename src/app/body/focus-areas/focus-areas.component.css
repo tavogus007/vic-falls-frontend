@@ -1,0 +1,45 @@
+.focus-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #800000;
+}
+
+
+.focus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.focus-img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.focus-card:hover .focus-img {
+  transform: scale(1.1);
+}
+
+.text-values{
+   font-family: 'base_font', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: rgb(14, 13, 13);
+  text-align: justify;
+}
+
+
+.area-title{
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #854444;
+}

@@ -13,7 +13,6 @@
   gap: 10px;   
   text-decoration: none;
   font-size: 1.5rem;
-  color: #d41818;
 
   .dot {
     color: #0bdd62;
@@ -25,12 +24,23 @@
 }
 
 .scrolled {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(245, 239, 127, 0.40);
   backdrop-filter: blur(6px);
+  .text-options,.text1,.text2 {
+    color: #800000;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  }
+  .logo-img {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+  }
+  .navbar-collapse.show{
+    background: none;
+  }
 }
 
 .logo-img {
-  height: 90px;
+  height: 60px;
   width: auto;
 }
 
@@ -42,16 +52,14 @@
 
 .text1 {
   display: flex;
-  font-size: 1.2rem;
-  color: #FFD700;
+  font-size: clamp(0.8rem, 0.133rem + 2.13vw, 1.2rem);
   margin-left: 10px;
 } 
 
 
 .text2 {
   display: flex;
-  font-size: 1rem;
-  color: #FFD700;
+  font-size: clamp(0.7rem, 0.2rem + 1.6vw, 1rem);
   margin-left: 10px;
   font-weight: lighter;
 } 
@@ -62,18 +70,97 @@
   color: #FFD700;
   margin-left: 10px;
   font-weight:lighter;
+  text-shadow: 1px 1px 2px black;
+  transition: color 0.3s ease;
 } 
 
-@font-face {
-  font-family: 'font1-logo';
-  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
-}
-
 .pesonalized-text {
-  font-family: 'font1-logo', sans-serif;
+  font-family: 'base_font', sans-serif;
   font-weight: bold;
+  color: #FFD700;
+  text-shadow: 1px 1px 2px black;
+  transition: color 0.3s ease;
 }
 
 .nav-item{
   display: flex;
+}
+
+.navbar-collapse.show {
+  background-color: rgba(104, 104, 104, 0.9);
+  padding: 1rem;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .logo-img {
+    height: 38px;
+  }
+
+  .text1 {
+    font-size: 0.65rem;
+    margin-left: 6px;
+  }
+
+  .text2 {
+    font-size: 0.58rem;
+    margin-left: 6px;
+  }
+
+  .navbar > .container {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    flex-shrink: 1;         
+    min-width: 0;           
+    overflow: hidden;
+  }
+
+  .brand-text {
+    overflow: hidden;
+  }
+
+  .text1,
+  .text2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .logo-img {
+    height: 48px;
+  }
+
+  .navbar-collapse.show {
+    margin-top: 16px;
+  }
+
+  .custom-navbar {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar-collapse.show {
+    display: block !important;
+    width: 100%;
+    flex-basis: 100%;
+    order: 3;                
+  }
+
+  .navbar > .container {
+    flex-wrap: wrap;         
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }

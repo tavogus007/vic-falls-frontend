@@ -1,0 +1,33 @@
+<section class="products-section py-4" id="products">
+  <div class="container">
+
+    <div class="text-center mb-5 text-values">
+      <h2 class="section-title">Primary Products & Services</h2>
+      <p class="section-subtitle">
+        Strategic offerings designed to strengthen institutions, knowledge systems and leadership.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center text-values">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4" *ngFor="let product of products">
+        <div class="product-card d-flex align-items-center p-4"
+             (click)="onProductClick(product)">
+
+          <div class="product-number">
+            {{ product.id }}
+          </div>
+
+          <div class="ms-4">
+            <h5 class="product-title">{{ product.title }}</h5>
+            <p class="product-description">
+              {{ product.description }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

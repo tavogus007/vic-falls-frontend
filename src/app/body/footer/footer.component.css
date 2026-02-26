@@ -1,0 +1,26 @@
+.footer {
+  background-color: #000;
+}
+
+.footer p {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #FFD700;
+}
+
+.text-gold {
+  color: #FFD700;
+}
+
+.text-footer{
+  font-family: 'base_font', sans-serif;
+}

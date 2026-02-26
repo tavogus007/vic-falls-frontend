@@ -1,0 +1,35 @@
+.core-values-section {
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #800000;
+}
+
+.value-card {
+  background: white;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.icon-wrapper i {
+  font-size: 3rem;
+  color: #800000; /* similar accent to template */
+}
+
+.text-values{
+  font-family: 'base_font', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: rgb(14, 13, 13);
+}
+

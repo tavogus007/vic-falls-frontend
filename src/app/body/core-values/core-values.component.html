@@ -1,0 +1,27 @@
+<section class="core-values-section py-4" id="core-values">
+  <div class="container text-center">
+
+    <!-- Title -->
+    <div class="mb-5">
+      <h2 class="section-title">Our Core Values</h2>
+      <p class="text-values">
+        The principles that guide our institution and define our commitment to excellence.
+      </p>
+    </div>
+
+    <!-- Values Grid -->
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let value of values">
+        <div class="value-card p-4 h-100">
+          <div class="icon-wrapper mb-3">
+            <i [class]="value.icon"></i>
+          </div>
+          <h5 class="value-title text-values">{{ value.title }}</h5>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
