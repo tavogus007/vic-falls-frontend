@@ -9,6 +9,7 @@
 .section-title {
   font-weight: 600;
   font-size: 2rem;
+  color: #800000;
 }
 
 
@@ -29,5 +30,16 @@
 }
 
 .text-values{
-  font-family: 'base_font', sans-serif;
+   font-family: 'base_font', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: rgb(14, 13, 13);
+  text-align: justify;
+}
+
+
+.area-title{
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #854444;
 }

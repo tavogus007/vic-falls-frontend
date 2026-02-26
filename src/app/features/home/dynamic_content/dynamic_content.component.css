@@ -1,3 +1,8 @@
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 15px;
+}
 .dynamic-content {
   transition: opacity 0.3s ease-in-out;
 }
@@ -5,6 +10,7 @@
 
 .img-about-us {
   width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 50px;
   display: block;
@@ -62,6 +68,14 @@
 .text-hero{
   font-family: 'base_font', sans-serif;
   padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p{
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: justify;
 }
 
 .text-founder{

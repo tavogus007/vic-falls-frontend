@@ -7,12 +7,13 @@
 .section-title {
   font-weight: 600;
   font-size: 2rem;
+  color: #800000;
 }
 
 .section-subtitle {
-  color: #6c757d;
-  max-width: 650px;
+  font-size: 1.2rem;
   margin: 0 auto;
+  color: rgb(14, 13, 13);
 }
 
 .product-card {
@@ -39,11 +40,13 @@
 .product-title {
   font-weight: 600;
   margin-bottom: 6px;
+  color: #854444;
 }
 
 .product-description {
-  color: #555;
-  margin: 0;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: rgb(14, 13, 13);
 }
 
 .text-values{

@@ -24,4 +24,41 @@ export class DynamicContentComponent {
   toggleSection(section: 'why' | 'vision'): void {
     this.activeSection = this.activeSection === section ? null : section;
   }
+
+  
+    goToSection(id: string, duration: number = 1200) {
+
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const navbarOffset = 80;
+
+    const startPosition = window.pageYOffset;
+    const targetPosition =
+      element.getBoundingClientRect().top +
+      window.pageYOffset -
+      navbarOffset;
+
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease =
+        progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+      window.scrollTo(
+        0,
+        startPosition + (targetPosition - startPosition) * ease
+      );
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  }
 }

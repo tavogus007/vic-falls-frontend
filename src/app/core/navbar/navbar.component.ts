@@ -23,7 +23,21 @@ export class NavbarComponent {
     this.scrolled = window.scrollY > 50;
   }
 
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.isMenuOpen) return;
+    
+    const clickedInside = this.navbarCollapse.nativeElement.contains(event.target as Node);
+    const clickedToggler = (event.target as Element).closest('.navbar-toggler');
+    
+    if (!clickedInside && !clickedToggler) {
+      this.isMenuOpen = false;
+    } 
+  }
+
   selectSection(section: string) {
+    this.isMenuOpen = false;
     if (section === 'home' || section === 'about' || section === 'leadership') {
       this.smoothScrollToTop(600);
     }

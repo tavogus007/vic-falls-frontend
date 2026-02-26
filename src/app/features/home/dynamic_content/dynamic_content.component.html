@@ -4,10 +4,10 @@
     <div *ngSwitchCase="'home'">
       <h1 class="display-2 fw-bold text-hero">Primary products and services<span class="dot">.</span></h1>
       <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-        <button class="btn rounded-pill fw-bold text-hero">Focus Areas</button>
-        <button class="btn rounded-pill fw-bold text-hero">Research & Dialogue</button>
-        <button class="btn rounded-pill fw-bold text-hero">Programs</button>
-        <button class="btn rounded-pill fw-bold text-hero">News</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('core-values')">Core Values</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('focus-areas')">Focus Areas</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('products')">Products and Services</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('news')">News</button>
       </div>
     </div>
 
@@ -72,7 +72,7 @@
       </div>
     </div>
 
-    <div *ngSwitchCase="'leadership'" class="container py-5">
+    <div *ngSwitchCase="'leadership'" class="container py-20">
       <div class="row align-items-center mb-5">
           <div class="col-md-6">
             <img src="founder.jpg" alt="founder" class="shadow img-about-us">
@@ -121,7 +121,13 @@
     </div>
 
     <div *ngSwitchDefault>
-      <h1 class="display-2 fw-bold">Primary products and services<span class="dot">.</span></h1>
+      <h1 class="display-2 fw-bold text-hero">Primary products and services<span class="dot">.</span></h1>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <button class="btn rounded-pill fw-bold text-hero">Core Values</button>
+        <button class="btn rounded-pill fw-bold text-hero">Focus Areas</button>
+        <button class="btn rounded-pill fw-bold text-hero">Products and Services</button>
+        <button class="btn rounded-pill fw-bold text-hero">News</button>
+      </div>
     </div>
 
   </div>
