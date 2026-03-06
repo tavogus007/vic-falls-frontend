@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { ArticlesService } from '../../../services/articles.service';
 import { ResearchService } from '../../../services/research.service';
+import { ProgramsService } from '../../../services/programs.service';
 
 @Component({
   selector: 'app-modal',
@@ -29,6 +30,7 @@ export class ModalComponent implements OnChanges {
   constructor(
     private articlesService: ArticlesService,
     private researchService: ResearchService,
+    private programService: ProgramsService,
   ) {}
 
   ngOnChanges(changes: SimpleChanges) {
@@ -58,7 +60,16 @@ export class ModalComponent implements OnChanges {
 
       case 2:
         this.modalTitle = 'Programs';
-        this.loading = false;
+        this.programService.getAll().subscribe({
+          next: (response: any) => {
+            this.items = response.data;
+            this.loading = false;
+          },
+          error: (err) => {
+            console.error('Error fetching programs:', err);
+            this.loading = false;
+          },
+        });
         break;
       case 3:
         this.modalTitle = 'Articles';
