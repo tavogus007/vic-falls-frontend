@@ -4,6 +4,8 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+  padding: 0;
 }
 
 .section-title {
@@ -19,10 +21,11 @@
 }
 
 .focus-img {
-  width: 200px;
-  height: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   transition: transform 0.4s ease;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .focus-card:hover .focus-img {
@@ -30,16 +33,17 @@
 }
 
 .text-values{
-   font-family: 'base_font', sans-serif;
+  font-family: 'base_font', sans-serif;
   font-size: 1.2rem;
   margin: 0 auto;
   color: rgb(14, 13, 13);
-  text-align: justify;
 }
-
-
 .area-title{
   font-weight: 600;
   font-size: 1.5rem;
   color: #854444;
+}
+
+.core-values-section {
+  background: linear-gradient(to bottom, #ffefd4, #fae8ca);
 }
