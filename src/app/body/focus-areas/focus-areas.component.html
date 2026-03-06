@@ -1,9 +1,9 @@
-<section class="focus-section py-4" id="focus-areas">
+<section class="core-values-section py-5" id="focus-areas">
   <div class="container">
 
-    <div class="text-center mb-5 text-values">
+    <div class="text-center text-values">
       <h2 class="section-title">Focus Areas</h2>
-      <p>
+      <p class="text-values">
         Our strategic pillars shaping regional transformation and sustainable development.
       </p>
     </div>
@@ -11,10 +11,10 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-values">
 
       <div class="col" *ngFor="let area of areas">
-        <div class="focus-card h-100 text-center p-4">
+        <div class="focus-card h-100 text-center">
 
           <img [src]="area.image" 
-               class="focus-img mb-3" 
+               class="focus-img mb-4" 
                alt="{{area.title}}">
 
           <h5 class="area-title">{{ area.title }}</h5>

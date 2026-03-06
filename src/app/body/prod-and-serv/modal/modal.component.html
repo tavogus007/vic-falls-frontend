@@ -1,0 +1,51 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="onClose()">
+  <div class="modal-box text-values" (click)="$event.stopPropagation()">
+
+    <div class="modal-header">
+      <h4 class="modal-title">{{ modalTitle }}</h4>
+      <button class="modal-close" (click)="onClose()">✕</button>
+    </div>
+
+    <div class="modal-body">
+
+      <!-- Loading -->
+      <div *ngIf="loading" class="modal-loading">
+        Loading...
+      </div>
+
+      <!-- Sin datos -->
+      <div *ngIf="!loading && items.length === 0" class="modal-empty">
+        No data available.
+      </div>
+
+      <!-- Articles (productId === 3) -->
+      <div *ngIf="!loading && productId === 3">
+        <div class="modal-item" *ngFor="let item of items">
+          <h5 class="item-title">{{ item.title }}</h5>
+          <p class="item-meta">By {{ item.author }} · {{ item.published_date | date:'mediumDate' }}</p>
+          <p class="item-content">{{ item.content }}</p>
+        </div>
+      </div>
+
+      <!-- Research (productId === 1) — se activa cuando tengas el service -->
+      <div *ngIf="!loading && productId === 1">
+        <div class="modal-item" *ngFor="let item of items">
+          <h5 class="item-title">{{ item.title }}</h5>
+          <p class="item-meta">By {{ item.author }} · {{ item.publication_date | date:'mediumDate' }}</p>
+          <p class="item-content">{{ item.abstract }}</p>
+        </div>
+      </div>
+
+      <!-- Programs (productId === 2) — se activa cuando tengas el service -->
+      <div *ngIf="!loading && productId === 2">
+        <div class="modal-item" *ngFor="let item of items">
+          <h5 class="item-title">{{ item.title }}</h5>
+          <p class="item-meta">{{ item.start_date | date:'mediumDate' }} → {{ item.end_date | date:'mediumDate' }}</p>
+          <p class="item-content">{{ item.description }}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
