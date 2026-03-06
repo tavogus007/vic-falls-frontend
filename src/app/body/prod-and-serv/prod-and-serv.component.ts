@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-prod-and-serv',
-  imports: [NgFor],
+  imports: [NgFor, ModalComponent],
   templateUrl: './prod-and-serv.component.html',
   styleUrl: './prod-and-serv.component.css'
 })
@@ -11,33 +12,26 @@ export class ProdAndServComponent {
     products = [
     {
       id: 1,
-      title: 'Policy and Research Dialogue',
+      title: 'Research Dialogue',
       description: 'High-level policy discussions and research engagement platforms for evidence-based decision-making.'
     },
     {
       id: 2,
-      title: 'Training Workshops and Short Courses',
+      title: 'Programs',
       description: 'Capacity-building programs tailored for professionals, institutions and emerging leaders.'
     },
     {
       id: 3,
-      title: 'Research Programs',
+      title: 'Articles',
       description: 'Long-term multidisciplinary research initiatives addressing regional and global challenges.'
-    },
-    {
-      id: 4,
-      title: 'System Strengthening Courses',
-      description: 'Programs designed to enhance governance systems, institutional performance and sustainability.'
-    },
-    {
-      id: 5,
-      title: 'Consultancy Services',
-      description: 'Expert advisory services supporting policy design, evaluation and strategic development.'
     }
   ];
 
+  modalOpen: boolean = false;
+  selectedProductId: number | null = null;
+
   onProductClick(product: any) {
-    console.log('Future navigation to:', product.title);
+    this.selectedProductId = product.id;
+    this.modalOpen = true;
   }
-  
 }
