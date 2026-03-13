@@ -44,3 +44,5 @@ Thumbs.db
 
 # Virtual Environment
 .venv
+
+src/assets/videos/
