@@ -26,15 +26,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy{
 
   @ViewChild('videoA') videoARef!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoB') videoBRef!: ElementRef<HTMLVideoElement>;
-  
+
 
   isFading: boolean = false;
-  
-  
+
+
 videos: string[] = [
-  'assets/videos/vidbg1.mp4',
-  'assets/videos/vidbg2.mp4',
-  'assets/videos/vidbg3.mp4'
+  'assets/videos/vidbg1_m.mp4',
+  'assets/videos/vidbg2_m.mp4',
+  'assets/videos/vidbg3_m.mp4'
 ];
 
 videoSrcA = this.videos[0];
@@ -42,15 +42,25 @@ videoSrcB = this.videos[1];
 currentVideo = this.videos[0];
 
 switchVideo() {
-
   this.currentIndex = (this.currentIndex + 1) % this.videos.length;
 
   if (this.activeVideo === 'A') {
     this.videoSrcB = this.videos[this.currentIndex];
     this.activeVideo = 'B';
+
+    setTimeout(() => {
+      this.videoBRef.nativeElement.load();
+      this.videoBRef.nativeElement.play();
+    }, 50);
+
   } else {
     this.videoSrcA = this.videos[this.currentIndex];
     this.activeVideo = 'A';
+
+    setTimeout(() => {
+      this.videoARef.nativeElement.load();
+      this.videoARef.nativeElement.play();
+    }, 50);
   }
 }
 
@@ -62,7 +72,7 @@ switchVideo() {
 
   ngAfterViewInit() {
   this.videoARef.nativeElement.load();
-  this.videoBRef.nativeElement.load();
+  this.videoARef.nativeElement.play();
 }
 
 }
