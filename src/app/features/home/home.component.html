@@ -4,7 +4,7 @@
         preload="auto"
          class="bg-video"
          [class.active]="activeVideo === 'A'"
-         [src]="videoSrcA"
+         autoplay
          muted
          playsinline
          (ended)="switchVideo()">
@@ -14,7 +14,7 @@
         preload="auto"
          class="bg-video"
          [class.active]="activeVideo === 'B'"
-         [src]="videoSrcB"
+         autoplay
          muted
          playsinline
           (ended)="switchVideo()">

@@ -45,22 +45,24 @@ switchVideo() {
   this.currentIndex = (this.currentIndex + 1) % this.videos.length;
 
   if (this.activeVideo === 'A') {
-    this.videoSrcB = this.videos[this.currentIndex];
     this.activeVideo = 'B';
-
-    setTimeout(() => {
-      this.videoBRef.nativeElement.load();
-      this.videoBRef.nativeElement.play();
-    }, 50);
+    const videoB = this.videoBRef.nativeElement;
+    videoB.muted = true;
+    videoB.src = this.videos[this.currentIndex];
+    videoB.load();
+    videoB.addEventListener('canplay', () => {
+      videoB.play().catch(err => console.warn('Error video B:', err));
+    }, { once: true });
 
   } else {
-    this.videoSrcA = this.videos[this.currentIndex];
     this.activeVideo = 'A';
-
-    setTimeout(() => {
-      this.videoARef.nativeElement.load();
-      this.videoARef.nativeElement.play();
-    }, 50);
+    const videoA = this.videoARef.nativeElement;
+    videoA.muted = true;
+    videoA.src = this.videos[this.currentIndex];
+    videoA.load();
+    videoA.addEventListener('canplay', () => {
+      videoA.play().catch(err => console.warn('Error video A:', err));
+    }, { once: true });
   }
 }
 
@@ -71,8 +73,18 @@ switchVideo() {
   }
 
   ngAfterViewInit() {
-  this.videoARef.nativeElement.load();
-  this.videoARef.nativeElement.play();
+  const videoA = this.videoARef.nativeElement;
+  const videoB = this.videoBRef.nativeElement;
+
+  videoA.muted = true;
+  videoB.muted = true;
+
+  videoA.src = this.videos[0];
+  videoA.load();
+
+  videoA.addEventListener('canplay', () => {
+    videoA.play().catch(err => console.warn('Error:', err));
+  }, { once: true });
 }
 
 }
