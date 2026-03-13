@@ -25,13 +25,13 @@ export class DynamicContentComponent {
     this.activeSection = this.activeSection === section ? null : section;
   }
 
-  
+
     goToSection(id: string, duration: number = 1200) {
 
     const element = document.getElementById(id);
     if (!element) return;
 
-    const navbarOffset = 80;
+    const navbarOffset = 120;
 
     const startPosition = window.pageYOffset;
     const targetPosition =

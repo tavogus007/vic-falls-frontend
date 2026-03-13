@@ -11,7 +11,7 @@ import { Collapse } from 'bootstrap';
 export class NavbarComponent {
   @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
 
-  logoNormal = 'logov4.png';       
+  logoNormal = 'logov2.png';
   logoScroll = 'logov2.png';
   scrolled = false;
   isMenuOpen = false;
@@ -27,13 +27,13 @@ export class NavbarComponent {
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     if (!this.isMenuOpen) return;
-    
+
     const clickedInside = this.navbarCollapse.nativeElement.contains(event.target as Node);
     const clickedToggler = (event.target as Element).closest('.navbar-toggler');
-    
+
     if (!clickedInside && !clickedToggler) {
       this.isMenuOpen = false;
-    } 
+    }
   }
 
   selectSection(section: string) {
