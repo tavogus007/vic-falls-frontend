@@ -21,18 +21,18 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border-left: 5px solid #925215;
+  border-left: 10px solid #925215;
   height: 100%;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 25px rgba(150, 102, 13, 0.508);
   border-left: 5px solid #66390f;
 }
 
 .product-number {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #66390f;
   min-width: 50px;
