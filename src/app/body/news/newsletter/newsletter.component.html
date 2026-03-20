@@ -1,0 +1,23 @@
+<div class="events-list">
+  <div class="event-card" *ngFor="let event of events">
+
+    <div class="event-type-badge">{{ event.type }}</div>
+
+    <div class="event-body">
+      <h3 class="event-title">{{ event.title }}</h3>
+      <p class="event-description">{{ event.description }}</p>
+    </div>
+
+    <div class="event-meta">
+      <span class="meta-item">
+        <i class="bi bi-calendar3"></i>
+        {{ event.date }}
+      </span>
+      <span class="meta-item">
+        <i class="bi bi-geo-alt"></i>
+        {{ event.location }}
+      </span>
+    </div>
+
+  </div>
+</div>
