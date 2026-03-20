@@ -1,17 +1,19 @@
 import { AfterViewInit, Component, NgZone } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 declare var bootstrap: any;
 @Component({
   selector: 'app-news',
-  imports: [NgFor],
+  imports: [NgFor, NewsletterComponent],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css'
 })
 export class NewsComponent implements AfterViewInit {
-  
-    constructor(private ngZone: NgZone) {}
-  
+
+    constructor(private ngZone: NgZone, private router: Router) {}
+
   activeIndex = 0;
 
   news = [
@@ -19,22 +21,19 @@ export class NewsComponent implements AfterViewInit {
       image: 'assets/news/news1.png',
       title: 'Regional Policy Dialogue 2026',
       date: 'February 2026',
-      description: 'Leaders and researchers gathered to discuss strategic regional development frameworks and governance innovation.',
-      link: 'https://worldpolicytimes.com/regional-dialogue-2026'
+      description: 'Leaders and researchers gathered to discuss strategic regional development frameworks and governance innovation.'
     },
     {
       image: 'assets/news/news2.png',
       title: 'Climate Resilience Workshop',
       date: 'January 2026',
-      description: 'Experts shared best practices in sustainability, environmental governance, and climate adaptation strategies.',
-      link: 'https://globalclimateobserver.org/workshop-2026'
+      description: 'Experts shared best practices in sustainability, environmental governance, and climate adaptation strategies.'
     },
     {
       image: 'assets/news/news3.png',
       title: 'Law and Governance Conference',
       date: 'December 2025',
-      description: 'A high-level conference addressing justice systems, institutional strengthening and rule of law.',
-      link: 'https://internationaljuristreview.com/conference-2025'
+      description: 'A high-level conference addressing justice systems, institutional strengthening and rule of law.'
     }
   ];
 
@@ -48,8 +47,9 @@ export class NewsComponent implements AfterViewInit {
     });
   }
 
-  onReadMore(item: any) {
-    console.log('Future navigation to full article:', item.title);
-     window.open(item.link, '_blank');
+  openNewsletter() {
+    const modalEl = document.getElementById('newsletterModal');
+    const modal = new bootstrap.Modal(modalEl);
+    modal.show();
   }
 }
