@@ -24,6 +24,16 @@ export class ProdAndServComponent {
       id: 3,
       title: 'Articles',
       description: 'Long-term multidisciplinary research initiatives addressing regional and global challenges.'
+    },
+    {
+      id: 4,
+      title: 'System Strengthening Courses',
+      description: 'Capacity-building programs designed for individuals, organization and businesses to foster skills and knowledge transfer.'
+    },
+    {
+      id: 5,
+      title: 'Consultancy Services',
+      description: 'Offering expertise in research methodologies, sustainable and equitable development strategies, and community engagement practices.'
     }
   ];
 

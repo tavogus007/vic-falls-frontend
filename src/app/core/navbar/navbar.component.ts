@@ -11,8 +11,8 @@ import { Collapse } from 'bootstrap';
 export class NavbarComponent {
   @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
 
-  logoNormal = 'logov2.png';
-  logoScroll = 'logov2.png';
+  logoNormal = 'logovF.png';
+  logoScroll = 'logovF.png';
   scrolled = false;
   isMenuOpen = false;
 
