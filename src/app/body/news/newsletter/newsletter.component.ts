@@ -25,7 +25,7 @@ export class NewsletterComponent {
     },
     {
       type: 'Seminar',
-      title: 'Environmental Policy Seminar',
+      title: 'Environmental Policy Seminars',
       date: 'June 20, 2026',
       location: 'Santa Cruz, Bolivia',
       description: 'An in-depth seminar addressing current environmental legislation, climate resilience strategies, and sustainable development goals in the region.'
