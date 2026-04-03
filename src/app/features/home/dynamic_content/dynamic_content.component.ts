@@ -66,4 +66,8 @@ export class DynamicContentComponent {
     window.open('/news', '_blank');
   }
 
+  openNewsletter(){
+    window.open('/newsletter', '_blank');
+  }
+
 }
