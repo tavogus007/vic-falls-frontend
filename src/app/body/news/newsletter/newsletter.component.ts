@@ -8,6 +8,8 @@ import { NgFor } from '@angular/common'
 })
 export class NewsletterComponent {
 
+  title = 'Victoria Falls Newsletter';
+
    events = [
     {
       type: 'Conference',

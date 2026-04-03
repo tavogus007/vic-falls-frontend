@@ -1,23 +1,31 @@
-<div class="events-list">
-  <div class="event-card" *ngFor="let event of events">
+<div class="newsletter-section">
+  <div class="newsletter-header">
+    <span class="newsletter-label">Stay Informed</span>
+    <h1 class="newsletter-title">{{ title }}</h1>
+    <p class="section-subtitle">A curated overview of our most relevant upcoming engagements.</p>
+  </div>
 
-    <div class="event-type-badge">{{ event.type }}</div>
+  <div class="events-list">
+    <div class="event-card" *ngFor="let event of events">
 
-    <div class="event-body">
-      <h3 class="event-title">{{ event.title }}</h3>
-      <p class="event-description">{{ event.description }}</p>
+      <div class="event-type-badge">{{ event.type }}</div>
+
+      <div class="event-body">
+        <h3 class="event-title">{{ event.title }}</h3>
+        <p class="event-description">{{ event.description }}</p>
+      </div>
+
+      <div class="event-meta">
+        <span class="meta-item">
+          <i class="bi bi-calendar3"></i>
+          {{ event.date }}
+        </span>
+        <span class="meta-item">
+          <i class="bi bi-geo-alt"></i>
+          {{ event.location }}
+        </span>
+      </div>
+
     </div>
-
-    <div class="event-meta">
-      <span class="meta-item">
-        <i class="bi bi-calendar3"></i>
-        {{ event.date }}
-      </span>
-      <span class="meta-item">
-        <i class="bi bi-geo-alt"></i>
-        {{ event.location }}
-      </span>
-    </div>
-
   </div>
 </div>

@@ -7,7 +7,8 @@
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('core-values')">Core Values</button>
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('focus-areas')">Focus Areas</button>
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('products')">Products and Services</button>
-        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('news')">News</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="openNews()">News</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="openNewsletter()">Newsletter</button>
       </div>
     </div>
 
@@ -23,13 +24,13 @@
               <p class="lead text-hero">We seek to localize the power of knowledge in the fields of, International Law, International Relations, Peace & Security, Governance, Development and Humanitarian Affairs</p>
            </div>
             <div class="justify-content-center d-flex gap-2">
-              <button 
-                class="btn rounded-pill fw-bold text-hero" 
+              <button
+                class="btn rounded-pill fw-bold text-hero"
                 [class.btn-active]="activeSection === 'why'"
                 (click)="toggleSection('why')">
                 Why we exist?
               </button>
-              <button 
+              <button
                 class="btn rounded-pill fw-bold text-hero"
                 [class.btn-active]="activeSection === 'vision'"
                 (click)="toggleSection('vision')">
@@ -39,7 +40,7 @@
 
 
             <div class="section-content" [class.visible]="activeSection !== null">
-        
+
             <div *ngIf="activeSection === 'why'" class="section-text">
               <h2 class="fw-bold mb-2 text-hero">Why We Exist?</h2>
               <p class="lead text-hero">
@@ -68,7 +69,7 @@
 
           </div>
 
-        </div>  
+        </div>
       </div>
     </div>
 
@@ -94,14 +95,14 @@
               </p>
               </div>
             </div>
-          
-        
+
+
           <div class="row align-items-center">
             <div class="col-md-6">
               <img src="director.jpg" alt="director" class="shadow img-about-us">
             </div>
             <div class="col-md-6 text-start">
-          
+
                 <h1 class="fw-bold text-hero">Dr. Saul Davis Sango</h1>
                 <h3 class="text-hero">Director</h3>
                   <p class="lead text-hero text-founder">Dr. Saul Davis Sango holds a B.Sc. in Statistics and Data Analysis and an M.Sc. in Industrial
@@ -126,7 +127,8 @@
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('core-values')">Core Values</button>
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('focus-areas')">Focus Areas</button>
         <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('products')">Products and Services</button>
-        <button class="btn rounded-pill fw-bold text-hero" (click)="goToSection('news')">News</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="openNews()">News</button>
+        <button class="btn rounded-pill fw-bold text-hero" (click)="openNewsletter()">Newsletter</button>
       </div>
     </div>
 

@@ -61,4 +61,13 @@ export class DynamicContentComponent {
 
     requestAnimationFrame(animateScroll);
   }
+
+  openNews(){
+    window.open('/news', '_blank');
+  }
+
+  openNewsletter(){
+    window.open('/newsletter', '_blank');
+  }
+
 }
