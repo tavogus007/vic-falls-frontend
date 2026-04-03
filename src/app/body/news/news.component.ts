@@ -18,19 +18,19 @@ export class NewsComponent implements AfterViewInit {
 
   news = [
     {
-      image: 'assets/news/news1.png',
+      image: 'assets/news/news5.jpg',
       title: 'Regional Policy Dialogue 2026',
       date: 'February 2026',
       description: 'Leaders and researchers gathered to discuss strategic regional development frameworks and governance innovation.'
     },
     {
-      image: 'assets/news/news2.png',
+      image: 'assets/news/news6.jpg',
       title: 'Climate Resilience Workshop',
       date: 'January 2026',
       description: 'Experts shared best practices in sustainability, environmental governance, and climate adaptation strategies.'
     },
     {
-      image: 'assets/news/news3.png',
+      image: 'assets/news/news7.jpg',
       title: 'Law and Governance Conference',
       date: 'December 2025',
       description: 'A high-level conference addressing justice systems, institutional strengthening and rule of law.'
@@ -48,8 +48,6 @@ export class NewsComponent implements AfterViewInit {
   }
 
   openNewsletter() {
-    const modalEl = document.getElementById('newsletterModal');
-    const modal = new bootstrap.Modal(modalEl);
-    modal.show();
+    window.open('/newsletter', '_blank');
   }
 }
