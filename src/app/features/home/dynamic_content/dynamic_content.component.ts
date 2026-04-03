@@ -61,4 +61,9 @@ export class DynamicContentComponent {
 
     requestAnimationFrame(animateScroll);
   }
+
+  openNews(){
+    window.open('/news', '_blank');
+  }
+
 }
